@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "robocar"
+version = "0.1.0"
+description = "Das Robocaar!!!!"
+authors = ["Levithas Tiamara"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+#picamera = "^1.13"
+adafruit-pca9685 = "^1.0.1"
+mpu6050-raspberrypi = "^1.2"
+websockets = "^10.4"
+fastapi = "^0.92.0"
+uvicorn = "^0.20.0"
+picamera = "^1.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
