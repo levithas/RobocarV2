@@ -71,22 +71,18 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 
-def startServer():
-    with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
-        output = StreamingOutput()
-        #Uncomment the next line to change your Pi's Camera rotation (in degrees)
-        #camera.rotation = 90
-        camera.start_recording(output, format='mjpeg')
-        try:
-            address = ('', 4567)
-            server = StreamingServer(address, StreamingHandler)
-            server.serve_forever()
-        finally:
-            camera.stop_recording()
-
-
 if __name__ == '__main__':
     if 'picamera' not in sys.modules:
         print("PiCamera not available on this system!")
     else:
-        startServer()
+        with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
+            output = StreamingOutput()
+            # Uncomment the next line to change your Pi's Camera rotation (in degrees)
+            # camera.rotation = 90
+            camera.start_recording(output, format='mjpeg')
+            try:
+                address = ('', 4567)
+                server = StreamingServer(address, StreamingHandler)
+                server.serve_forever()
+            finally:
+                camera.stop_recording()
