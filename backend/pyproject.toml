@@ -7,7 +7,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-#picamera = "^1.13"
 adafruit-pca9685 = "^1.0.1"
 mpu6050-raspberrypi = "^1.2"
 websockets = "^10.4"
