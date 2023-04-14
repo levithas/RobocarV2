@@ -1,12 +1,7 @@
 import uvicorn
-import io
-import logging
-import os
-import asyncio
-from threading import Condition
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, StreamingResponse
+
 
 from sensors import system_sensors
 
