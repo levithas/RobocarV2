@@ -4,10 +4,7 @@
       <v-card>
         <v-card-title>Camera Feed</v-card-title>
         <v-sheet>
-          <Camera
-            width="320"
-            height="240"
-          />
+          <v-img src="@/assets/logo.png"/>
         </v-sheet>
       </v-card>
       <v-card>
@@ -17,7 +14,10 @@
               <v-btn>Center</v-btn>
             </div>
           <v-card color="secondary">
-            <MapView/>
+            <GlobalView
+              width="700"
+              height="700"
+            />
           </v-card>
         </v-container>
       </v-card>
@@ -31,13 +31,12 @@
 
 <script>
 import {defineComponent} from 'vue'
-import MapView from '@/components/MapView.vue'
+import GlobalView from '@/components/GlobalView.vue'
 import DataFeed from '@/components/DataFeed.vue'
-import Camera from '@/components/Sensors/Camera.vue'
 
 export default defineComponent({
   name: 'Overview',
-  components: {MapView, DataFeed, Camera}
+  components: {GlobalView, DataFeed}
 })
 </script>
 

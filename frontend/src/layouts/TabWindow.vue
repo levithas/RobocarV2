@@ -5,7 +5,7 @@
         <Overview/>
       </v-window-item>
       <v-window-item value="tabCamera">
-        <CameraControl/>
+        <Camera/>
       </v-window-item>
       <v-window-item value="tabAutopilot">
         <Autopilot/>
@@ -27,7 +27,7 @@
 
 import { defineComponent } from 'vue'
 import Overview from '@/components/Tabs/Overview.vue'
-import CameraControl from '@/components/Tabs/CameraControl.vue'
+import Camera from '@/components/Tabs/Camera.vue'
 import Autopilot from '@/components/Tabs/Autopilot.vue'
 import ManualControl from '@/components/Tabs/ManualControl.vue'
 import SensorGraphs from '@/components/Tabs/SensorGraphs.vue'
@@ -35,7 +35,7 @@ import Settings from '@/components/Tabs/Settings.vue'
 
 export default defineComponent( {
   name: "TabWindow",
-  components: {Overview, CameraControl, Autopilot, ManualControl, SensorGraphs, Settings},
+  components: {Overview, Camera, Autopilot, ManualControl, SensorGraphs, Settings},
   props: {
     currentTab : String,
   }
