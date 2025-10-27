@@ -1,7 +1,7 @@
 # Warning
  This project is meant to be used in a closed, offline network! 
  The project contains NOT up-to-date packages with possible vulnerabilities!
- Developement build ONLY!!!
+ Development build ONLY!!!
 
 (Changes are on the way)
  
